@@ -1,9 +1,11 @@
 import React, { ReactNode } from 'react';
+import Navbar from '../components/Navbar.tsx';
 
-export default function Layout({ children }: { children: ReactNode }): JSX.Element {
+export default function Layout({ children }:Readonly<{ children: ReactNode }>){
 	return (
-		<div>
+		<main className='font-work-sans'>
+			<Navbar/>
 			{children}
-		</div>
+		</main>
 	);
 }
